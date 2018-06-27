@@ -1,0 +1,10 @@
+cliente
+compra
+vendas
+produtos
+funcionarios
+pedidos
+
+
+.. varchar = caracteres
+..data = date

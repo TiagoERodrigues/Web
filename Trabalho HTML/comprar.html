@@ -1,0 +1,182 @@
+	<!DOCTYPE html>
+	<html >
+		<head>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8">
+			<link rel="stylesheet" href="css/index.css">
+			<meta name="viewport" content="whidth=device-width, initial-scale=1, shrink-to-fit=no">
+			<meta name="Keywords" content="peças, auto peças, peças 2000, 2000 auto peças">
+			<meta name="Description" content="Loja virtual de autopeças e acessórios para veículos pesados. Aqui você encontra tudo. Vendemos para todo o Brasil em até 10x sem juros.">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="css/estilo.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+			<title> Página de compra </title>
+
+		</head>
+		<body>
+			<!-- Cabeçalho da página inicial -->
+			<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="index.html">Logo</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li class="active"><a href="produtos.html" target=“_blank”>Produtos</a></li>
+					<li class="active"><a href="contato.html" target=“_blank”>Contato</a></li>
+					<li class="active"><a href="comprar.html" target=“_blank”>Página de compra</a></li>
+				  </ul>
+				  <ul class="nav navbar-nav navbar-right">
+					<input type="text" size="40" maxlength="40" name="search" placeholder="Procurar">
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+
+			<div class="texto">
+				<p><h1>Compra direta de produtos</h1></p>
+				<p><br><h4>Aqui você pode comprar seu produto diretamente, só precisa preencher os campos da forma certa!</h4></p>
+			</div>
+
+		  <!-- formulário de entreg -->
+			<form>
+				<fieldset>
+					<legend>Dados do produto</legend>
+
+					<label><p>Nome do produto: <input type="text" name="nomeproduto" size="50"></p></label><br />
+		      <br>
+
+					<label><p>Quantidade do produto: <input type="number" name="quantidadeproduto" size="2"></p></label>
+
+				</fieldset>
+			</form>
+
+		<form method="get" action=".">
+			<fieldset>
+		    <legend>Dados para entrega </legend>
+		      <p><label>Cep:
+		      <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" /></label><br />
+		      <br></p>
+
+		      <p><label>Rua:
+		      <input name="rua" type="text" id="rua" size="60" /></label><br />
+		      <br></p>
+
+		      <p><label>Bairro:
+		      <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+		      <br></p>
+
+		      <p><label>Cidade:
+		      <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+		      <br></p>
+
+		      <p><label>Estado:
+		      <input name="uf" type="text" id="uf" size="2" /></label><br /></p>
+		  </fieldset>
+		</form>
+		  <br><br>
+
+		  <!--Formas de pagamento -->
+			<form>
+			<fieldset>
+		    <legend> Forma de pagamento </legend>
+		      <p> Selecione a forma de pagamento desejada: </p>
+		      <div>
+		        <img id="forma_pagamento" src="img/cartao.png"></img>
+		        <input id="opt-cartao" checked="checked" type="radio" name="FormaPagamento" onclick="PagamentoFuncao();" />&nbsp;
+		        <label for="opt-cartao"> Cartão de credito </label>
+		        <br>
+
+		        <img id="forma_pagamento" src="img/boleto.png"></img>
+		        <input id="opt-boleto" type="radio" name="FormaPagamento" onclick="PagamentoFuncao();" />
+		        <label for="opt-boleto"> Boleto</label>
+		      </div>
+
+		      <!-- Se a opção de pagamento for cartao de credito aparecerá esse formulário -->
+		      <div id="cartao">
+		        <h1> Cartão de crédito </h1>
+		        <label> Nome: </label> <input type="text"></input> <br> <br>
+				<label> CPF: </label> <input type="text" name="cpf" id="cpf" maxlength="10" (/^(\d{3})\s(\d{3})\s(\d{3})(\d{2}) /> <br> <br>
+		        <label> Número do cartão: </label> <input type="text" name="cc" id="cc" maxlength="19" /> <br> <br>
+				<label> Número de segurança: </label> <input type="text" name="ns" id="ns" maxlength="3" size="3" /> <br> <br>
+		        <label> Mês de vencimento:  </label>
+		        <select>
+		              <option value='1'> Janeiro </option>
+		              <option value='2'> Fevereiro </option>
+		              <option value='3'> Março </option>
+		              <option value='4'> Abril </option>
+		              <option value='5'> Maio </option>
+		              <option value='6'> Junho </option>
+		              <option value='7'> Julho </option>
+		              <option value='8'> Agosto </option>
+		              <option value='9'> Setembro </option>
+		              <option value='10'> Outubro </option>
+		              <option value='1'> Novembro </option>
+		              <option value='12'> Dezembro </option>
+		        </select>
+		       <br>
+
+		      <label> Ano de vencimento: </label>
+		      <select>
+		        <option value='1'> 17 </option>
+		        <option value='2'> 18 </option>
+		        <option value='3'> 19 </option>
+		        <option value='4'> 20 </option>
+		        <option value='5'> 21 </option>
+		        <option value='6'> 22 </option>
+		        <option value='7'> 23 </option>
+		        <option value='8'> 24 </option>
+		        <option value='9'> 25 </option>
+		        <option value='10'> 26 </option>
+		        <option value='1'> 27 </option>
+		        <option value='12'> 28 </option>
+		        <option value='10'> 29 </option>
+		        <option value='1'> 30 </option>
+		    </select>
+
+				<br><br><input type="submit" value="Finalizar compra">
+			</div>
+		    <!-- Se a opção de pagamento for boleto aparecerá esse formulário -->
+		    <div id="boleto" style="display: none;">
+		      <h1> Boleto </h1>
+				<label> Nome: </label> <input type="text"></input> <br> <br>
+		      	<label> CPF: </label> <input type="text" name="cpf" id="cpf" maxlength="10" (/^(\d{3})\s(\d{3})\s(\d{3})(\d{2}) /> <br> <br>
+				<a class="btn btn-default" href="boleto/bol.htm" target="_blank">Gerar boleto</link></a>
+		    </div>
+		  </fieldset>
+		</form>
+
+			<!--Rodapé da página -->
+		<footer class="container-fluid text-center">
+				<section>
+					<div class="container-fluid">
+						<div calss="container">
+							<div class="row">
+								<div class="col-md-12 col-lg-12">
+									<div class="footer-menu">
+		                <dt><a href="index.html">Home</a></dt>
+		                <dt><a href="contato.html" target=“_blank”>Contato</a></dt>
+										<dt><a href="funcionario.html" target=“_blank”>Página do Funcionário</a></dt>
+										<dt><a href="fornecedor.html" target=“_blank”>Página do Fornecedor</a></dt>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<p><br>Copyright &copy; Criado por CC2018-IFMG.</p>
+
+		</footer>
+
+		<script type="text/javascript" src="js/prencher_dados.js"></script>
+		</body>
+
+	</html>

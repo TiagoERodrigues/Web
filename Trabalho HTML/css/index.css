@@ -1,0 +1,57 @@
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+footer {
+      background-color: black;
+      padding: 10px;
+    }
+
+ .carousel-inner img {
+      width: 100%;
+      margin: auto;
+      min-height:200px;
+  }
+
+
+@media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: auto;
+}
+
+ form{
+	 margin: 50px;
+ }
+
+.sobre{
+  margin: 50px;
+  font-size: 20px;
+}
+
+.produtos{
+  margin-left: 100px;
+  margin-right: 25px;
+}
+
+.texto{
+  margin-left: 100px; 
+}

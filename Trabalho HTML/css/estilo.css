@@ -1,0 +1,13 @@
+body {
+  font-family: arial, helvetica, sans-serif;
+}
+
+#forma_pagamento {
+  width: 5%;
+  height: auto;
+}
+
+#bandeiras {
+  width: 30%;
+  height: auto;
+}
